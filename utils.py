@@ -6,6 +6,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import numpy as np
 from datetime import timezone
+# import datetime as dt
 from datetime import datetime
 
 
@@ -119,7 +120,15 @@ def unixTimeMillis(dt):
 def unixToDatetime(unix):
     ''' Convert unix timestamp to datetime. '''
     return pd.to_datetime(unix,unit='s')
+
+
+def unixToDatetimeNs(unix):
+    ''' Convert unix timestamp to datetime. '''
+    return pd.to_datetime(unix,unit='ns')
 #     return pd.to_datetime(unix)
+
+
+# def unixNsToS
 
 
 def getMarks(date_range, Nth=1):
